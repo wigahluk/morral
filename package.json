@@ -1,0 +1,23 @@
+{
+  "name": "morral",
+  "version": "0.1.0",
+  "description": "A bag of small tools for node.js scripts",
+  "main": "./src/morral.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wigahluk/morral.git"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "Oscar Ponce",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/wigahluk/morral/issues"
+  },
+  "homepage": "https://github.com/wigahluk/morral#readme"
+}
