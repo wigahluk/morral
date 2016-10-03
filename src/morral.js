@@ -14,9 +14,12 @@
  limitations under the License.
  */
 
-
 const logger = require('./logger');
+const git = require('./git');
+const fs = require('./fs');
 
 module.exports = {
-    logger: logger
+    logger: logger,
+    git: git,
+    fs: fs
 };
