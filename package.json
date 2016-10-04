@@ -1,6 +1,6 @@
 {
   "name": "morral",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A bag of small tools for node.js scripts",
   "main": "./src/morral.js",
   "scripts": {

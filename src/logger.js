@@ -50,7 +50,7 @@ const objectToString = (a, maxDeep, deep) => {
     if (deep >= maxDeep) return c('<obj>', colors.cyan);
     const array = objectToArray(a);
     const isLonger = array.length > maxArrayLength;
-    const message = objectToArray(a).slice(0, maxArrayLength).map(i => `'${i[0]}': ${toString(i[1])}`).join(', ') +
+    const message = objectToArray(a).slice(0, maxArrayLength).map(i => `'${i[0]}': ${toString(i[1], maxDeep, deep + 1)}`).join(', ') +
         (isLonger ? ', ... ' : '');
     return c('{', colors.yellow) + message + c('}', colors.yellow);
 };
@@ -75,7 +75,7 @@ const log = name => function () {
     const deep = (args.length === 1) ? 0 : 1;
     const message = args.slice(0, maxArrayLength).map(i => toString(i, 3, deep)).join(',\n');
 
-    console.log(appName(name), message.length > maxOuterStringLength ? message.substr(0, maxOuterStringLength) + '...' : message);
+    console.log(appName(name), message);
 };
 
 const logger = (name) => {
